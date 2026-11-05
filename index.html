@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gamepoint – How Scoring, Points and Rules Work in Games</title>
+<meta name="description" content="Gamepoint is an informational resource about scoring in games: how points work in sports, board games and video games, how rewards and levels motivate players, and how to keep score fairly and kindly.">
+
+<!-- GOOGLE AD CODE: apna AdSense / Google Ads script yahan paste karein -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+<style>
+:root{--ink:#1F2433;--coral:#F0546B;--sun:#FFC83D;--azure:#3A86D1;--paper:#F7F6FB;--text:#272C3E;--muted:#60667C;--line:#E0E2EE}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,"Times New Roman",serif;color:var(--text);background:#fff;line-height:1.75;font-size:17px;width:100%;overflow-x:hidden}
+h1,h2,h3,nav,.btn,.tag,footer,summary,th,td.k,.num{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:#2A6DB0}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 24px}
+header{background:var(--ink);color:#fff;width:100%}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:"Segoe UI",Roboto,Arial,sans-serif;font-weight:700;font-size:24px}
+.logo svg{width:42px;height:42px}
+nav a{color:#BFC5DA;text-decoration:none;margin-left:22px;font-size:15px}
+nav a:hover{color:#fff}
+.hero{background:linear-gradient(125deg,var(--ink) 0%,#34406E 100%);color:#fff;padding:72px 0 84px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.hero h1{font-size:46px;line-height:1.15;margin-bottom:18px}
+.hero p{color:#DADFF0;font-size:19px;max-width:560px}
+.btn{display:inline-block;margin-top:26px;background:var(--sun);color:#2B2200;font-weight:700;padding:13px 26px;border-radius:6px;text-decoration:none}
+.btn:hover{background:#ffd666}
+.pad{background:#10141F;border:2px solid rgba(255,255,255,.18);border-radius:18px;padding:18px}
+.pad svg{width:100%;height:auto;display:block}
+section{padding:64px 0}
+section.alt{background:var(--paper)}
+h2{font-size:32px;line-height:1.25;color:var(--ink);margin-bottom:16px}
+h3{font-size:20px;color:var(--ink);margin-bottom:8px}
+.lead{max-width:820px;color:var(--muted);margin-bottom:34px;font-size:18px}
+p+p{margin-top:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+.tag{display:inline-block;font-size:13px;font-weight:600;color:#9B2A3E;background:#FDE3E7;border-radius:20px;padding:3px 12px;margin-bottom:12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.slot{width:100%;max-width:1180px;margin:0 auto;padding:10px 24px;min-height:100px;text-align:center}
+ul.clean{list-style:none}
+ul.clean li{padding:10px 0 10px 32px;position:relative;border-bottom:1px solid var(--line)}
+ul.clean li:before{content:"+1";position:absolute;left:0;top:11px;font-family:"Segoe UI",Roboto,Arial,sans-serif;font-size:12px;font-weight:700;color:#2B2200;background:var(--sun);border-radius:10px;padding:0 5px;line-height:20px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:#fff}
+table{width:100%;border-collapse:collapse;min-width:720px;font-size:16px}
+th{background:var(--ink);color:#fff;text-align:left;padding:14px 18px;font-weight:600}
+td{padding:14px 18px;border-top:1px solid var(--line);vertical-align:top}
+td.k{font-weight:700;color:var(--ink)}
+tr:nth-child(even) td{background:#FAFAFD}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}
+.num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--coral);color:#fff;font-weight:700;margin-bottom:10px}
+.step p{font-size:16px;color:var(--muted)}
+details{border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin-bottom:12px;background:#fff}
+summary{cursor:pointer;font-weight:600;color:var(--ink);font-size:17px}
+details p{margin-top:10px;color:var(--muted)}
+.disclaimer{background:#FFF7DD;border-top:4px solid var(--sun);border-bottom:1px solid #F0E0A0}
+.disclaimer h2{font-size:26px}
+.disclaimer p{color:#4A4423;font-size:16px}
+footer{background:var(--ink);color:#A3A9C0;padding:36px 0;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{color:#fff;margin-left:20px;text-decoration:none}
+footer a:hover{text-decoration:underline}
+@media(max-width:900px){.hero .wrap,.two{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.hero h1{font-size:36px}}
+@media(max-width:600px){.grid,.steps{grid-template-columns:1fr}nav a{margin:0 16px 0 0}h2{font-size:27px}.hero{padding:48px 0 56px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Gamepoint home">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#F0546B"/><circle cx="24" cy="24" r="13" fill="none" stroke="#fff" stroke-width="3.500"/><circle cx="24" cy="24" r="6" fill="none" stroke="#fff" stroke-width="3"/><circle cx="24" cy="24" r="2.500" fill="#FFC83D"/></svg>
+      Gamepoint
+    </a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#why">Why Points</a>
+      <a href="#table">Scoring Compared</a>
+      <a href="#video">Video Games</a>
+      <a href="#fair">Fair Play</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Every game has a point. Here is how it keeps score.</h1>
+      <p>Gamepoint is an independent reading resource about scoring in games. We explain how points work in sports, board games and video games, why scores and rewards motivate us, and how to keep score in a way that stays fair, friendly and fun for everyone.</p>
+      <a class="btn" href="#table">See how scoring compares</a>
+    </div>
+    <div class="pad">
+      <svg viewBox="0 0 400 260" role="img" aria-label="Illustration of a scoreboard showing two scores">
+        <rect x="8" y="8" width="384" height="244" rx="12" fill="#10141F"/>
+        <text x="200" y="52" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#9AA3C7" letter-spacing="4">SCOREBOARD</text>
+        <rect x="34" y="72" width="150" height="110" rx="10" fill="#1C2236" stroke="#F0546B" stroke-width="3"/>
+        <rect x="216" y="72" width="150" height="110" rx="10" fill="#1C2236" stroke="#3A86D1" stroke-width="3"/>
+        <text x="109" y="150" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="72" font-weight="700" fill="#FFC83D">21</text>
+        <text x="291" y="150" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="72" font-weight="700" fill="#FFC83D">18</text>
+        <text x="109" y="98" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" fill="#F0546B" font-weight="700">PLAYER A</text>
+        <text x="291" y="98" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" fill="#6FB0F0" font-weight="700">PLAYER B</text>
+        <circle cx="200" cy="127" r="8" fill="#FFC83D"/>
+        <path d="M70 214h260" stroke="#2C3454" stroke-width="6" stroke-linecap="round"/>
+        <path d="M70 214h170" stroke="#FFC83D" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- GOOGLE AD SLOT 1 -->
+<div class="slot">
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+</div>
+
+<section id="about">
+  <div class="wrap two">
+    <div>
+      <h2>What Gamepoint is about</h2>
+      <p>Whether it is a goal in football, a coin in a video game or the last piece reaching home in a board game, scoring gives play a shape. It tells us what we are aiming for, how we are doing and when the game is over.</p>
+      <p>Gamepoint was created to explain these systems in plain language. Our articles describe how scoring works in different kinds of games, why points and rewards feel so motivating and how to keep competition friendly. We are a reading resource only and do not run games, tournaments or scoring services, and we do not sell games.</p>
+    </div>
+    <div>
+      <h3>What you will find here</h3>
+      <ul class="clean">
+        <li>The purpose of points and scores in play</li>
+        <li>A comparison of scoring in popular games</li>
+        <li>How levels, badges and rewards work in video games</li>
+        <li>Ideas for fair and friendly score keeping</li>
+        <li>Answers to common questions from players and parents</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="why">
+  <div class="wrap">
+    <h2>Why games use points</h2>
+    <p class="lead">Scoring is a simple tool that does several jobs at once.</p>
+    <div class="grid">
+      <div class="card"><span class="tag">Goal</span><h3>Gives players something to aim for</h3><p>A target, such as reaching a number of points, turns open-ended play into a clear challenge.</p></div>
+      <div class="card"><span class="tag">Feedback</span><h3>Shows how you are doing</h3><p>A rising score tells you at once that your choices are working, and helps you adjust when they are not.</p></div>
+      <div class="card"><span class="tag">Fairness</span><h3>Creates a shared measure</h3><p>Everyone plays by the same counting rules, so the result can be agreed without argument.</p></div>
+      <div class="card"><span class="tag">Progress</span><h3>Makes improvement visible</h3><p>Comparing today's score with last week's is a satisfying way to notice your own progress.</p></div>
+      <div class="card"><span class="tag">Tension</span><h3>Builds excitement</h3><p>Close scores keep both sides engaged until the end, which is part of what makes games thrilling.</p></div>
+      <div class="card"><span class="tag">Ending</span><h3>Decides when a game finishes</h3><p>Reaching a target score, or having the most points when time runs out, gives a clear finish.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="table">
+  <div class="wrap">
+    <h2>Scoring compared across popular games</h2>
+    <p class="lead">Different games count in very different ways. These are general summaries of widely used scoring, and local or tournament rules can vary.</p>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Game</th><th>How points are earned</th><th>How a game is won</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Football</td><td>A goal is worth one point on the scoreboard</td><td>The team with more goals when time ends</td></tr>
+          <tr><td class="k">Basketball</td><td>Baskets are worth one, two or three points depending on the shot</td><td>The team with more points when time ends</td></tr>
+          <tr><td class="k">Cricket</td><td>Batters score runs by running between the wickets or hitting boundaries</td><td>The side with more runs, within the format's limits</td></tr>
+          <tr><td class="k">Tennis</td><td>Points are counted as 15, 30 and 40, then a game is won</td><td>Winning games, then sets, to take the match</td></tr>
+          <tr><td class="k">Badminton</td><td>A point is scored on every rally</td><td>First to 21 points, with a two-point lead needed</td></tr>
+          <tr><td class="k">Chess events</td><td>A win is often one point, a draw half a point</td><td>Checkmating the opponent, or most points in a tournament</td></tr>
+          <tr><td class="k">Ludo</td><td>No points, pieces move around a track by dice</td><td>Getting all your pieces home first</td></tr>
+          <tr><td class="k">Carrom</td><td>Pocketing coins earns points for each coin colour</td><td>Reaching an agreed total score</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE AD SLOT 2 -->
+<div class="slot">
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+</div>
+
+<section class="alt" id="video">
+  <div class="wrap two">
+    <div>
+      <h2>Points, levels and rewards in video games</h2>
+      <p>Video games often layer several scoring ideas together. A score can record how well you did in a level, experience points can unlock new abilities, and badges or achievements can mark special accomplishments such as finishing a story or discovering a hidden area.</p>
+      <p>These systems are designed to make progress feel satisfying, and they can be enjoyable when used in moderation. It helps to remember that rewards inside a game are there for fun. Chasing every badge is optional, and no game needs to be finished at the cost of sleep, study or time with other people. Families should also look out for optional in-game purchases that offer extra rewards.</p>
+    </div>
+    <div>
+      <h3>Common reward ideas</h3>
+      <ul class="clean">
+        <li>Score: a number that records performance</li>
+        <li>Experience points: progress that unlocks abilities</li>
+        <li>Levels: stages that show how far you have come</li>
+        <li>Badges and achievements: marks for special goals</li>
+        <li>Leaderboards: rankings that compare players</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="fair">
+  <div class="wrap">
+    <h2>Four steps to keeping score fairly and kindly</h2>
+    <p class="lead">Good score keeping protects friendships as well as results. These habits work for family games, school games and friendly matches.</p>
+    <div class="steps">
+      <div class="step"><span class="num">1</span><h3>Agree the rules first</h3><p>Before starting, decide how points are earned and how the game ends, so nobody feels surprised later.</p></div>
+      <div class="step"><span class="num">2</span><h3>Choose a clear scorekeeper</h3><p>Use a visible scoreboard, paper or app, and let one person record, or let players check each other.</p></div>
+      <div class="step"><span class="num">3</span><h3>Say the score aloud</h3><p>Announcing points as they happen helps everyone stay on the same page and prevents disputes.</p></div>
+      <div class="step"><span class="num">4</span><h3>Celebrate effort, not only wins</h3><p>Shake hands, praise good plays and talk about what went well, whatever the final number says.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE AD SLOT 3 -->
+<div class="slot">
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="3333333333" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+</div>
+
+<section class="alt" id="faq">
+  <div class="wrap" style="max-width:860px">
+    <h2>Frequently asked questions</h2>
+    <details><summary>Is Gamepoint a scoring service, game store or tournament organiser?</summary><p>No. Gamepoint does not run games, tournaments or scoring services and does not sell games. It is a reading resource that explains scoring in simple language.</p></details>
+    <details><summary>Are the scoring rules on this site official?</summary><p>They are general summaries only. Official rules differ between sports bodies, tournaments and regions, so always check the rules that apply to your game or competition.</p></details>
+    <details><summary>Why do high scores feel so motivating?</summary><p>A clear number gives quick feedback and a visible target. Beating a personal best can feel rewarding, which is why many people enjoy trying again.</p></details>
+    <details><summary>How can I handle losing without getting upset?</summary><p>Remember that every player loses sometimes. Focus on what you enjoyed and learned, congratulate the winner and treat the next game as a fresh start.</p></details>
+    <details><summary>How can parents balance game rewards with healthy habits?</summary><p>Agree on time limits, talk about optional purchases, encourage other activities and remind children that in-game achievements are for fun, not a measure of their worth.</p></details>
+  </div>
+</section>
+
+<section class="disclaimer" id="disclaimer">
+  <div class="wrap" style="max-width:900px">
+    <h2>Disclaimer</h2>
+    <p>The content on Gamepoint is provided for general informational and educational purposes only. It is not professional, educational, psychological, financial or legal advice. Descriptions of scoring are simplified summaries and may differ from the official rules of any sport, game or competition. We make reasonable efforts to keep information accurate, but we do not guarantee its completeness or suitability for any particular purpose, and readers should check official rules before relying on them.</p>
+    <p>Parents and guardians remain responsible for supervising children, choosing age-appropriate games and managing online safety and spending. Gamepoint is not responsible for any loss, damage or harm arising from reliance on the information provided.</p>
+    <p>Gamepoint is an independent website and is not affiliated with, endorsed by or sponsored by any sports body, game developer, publisher or platform. Names and trademarks mentioned belong to their respective owners. Gamepoint does not offer, host or promote real-money gambling or betting, and nothing on this site should be read as encouragement to gamble. Third-party advertising may appear on this site; advertisers are solely responsible for their own content.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; 2026 Gamepoint. All rights reserved.</div>
+    <div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
